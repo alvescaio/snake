@@ -11,8 +11,6 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        overflow-y: hidden;
-        overflow-x: hidden;
       }
       canvas{
         background: #9ccb95;
@@ -27,7 +25,7 @@
     </style>
 
   </head>
-  <body scroll="no">
+  <body>
       <script>
 
         var canvas, ctx, WIDTH, HEIGHT, FPS, tileSize, playing;
@@ -177,7 +175,7 @@
             nextPos =  [snake.body[0][0] + snake.direction[0], snake.body[0][1] + snake.direction[1]];
             snake.body.splice(0, 0, nextPos);
             play_beep();
-            comida.body = [Math.floor((Math.random() * 30)), Math.floor((Math.random() * 30))];
+            comida.body = [Math.floor((Math.random() * 60)), Math.floor((Math.random() * 30))];
           }
           if(snake.body[0][1] >= HEIGHT || snake.body[0][1] <= 0 || snake.body[0][0] >= WIDTH || snake.body[0][0] <= 0){
             console.log("fim de jogo");
