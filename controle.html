@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+    <title>Snake - Control</title>
+
+    <link rel="stylesheet" href="icomoon/style.css">
+
+    <style>
+      form {
+        width: 250px;
+        text-align: center;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-top:-125px;
+        margin-left:-125px;
+      }
+      form button {
+        position: relative;
+        margin: 2px;
+        font-size: 60px;
+        background-color: transparent;
+        border: 0;
+      }
+      form button.up {
+        width: 100%;
+      }
+      form button.right {
+        float: right;
+      }
+      form button.left {
+        float: left;
+      }
+    </style>
+
+  </head>
+  <body>
+    <form action="index.html" method="post">
+      <button class="up" onclick="buttonClick(38)" type="button" name="button-up"><span class="icon-circle-up">
+      </span></button>
+      <br/>
+      <button class="right" onclick="buttonClick(39)" type="button" name="button-right"><span class="icon-circle-right">
+    </span></button>
+      <button class="left" onclick="buttonClick(37)" type="button" name="button-left"><span class="icon-circle-left">
+    </span></button>
+      <button class="down" onclick="buttonClick(40)" type="button" name="button-down"><span class="icon-circle-down">
+    </span></button
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script language="JavaScript" src="controle.js"></script>
+  </body>
+</html>
